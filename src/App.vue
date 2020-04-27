@@ -2,7 +2,7 @@
   <div id="app">
     <drink-header title="Juice Joint"/>
 
-    <div id="drink-list">
+    <div id="list-info" v-if="drinks.length">
       <h2>Drinks List</h2>
       <drink-list :drinks="drinks"></drink-list>
       <drink-detail v-if='selectedDrink' :drink='selectedDrink'></drink-detail>
@@ -11,9 +11,8 @@
       <div id="favorite-drinks-list">
         <h2>Favorite Drinks</h2>
         <drink-list :drinks="favoriteDrinks"></drink-list>
-        <li v-for="(favoriteDrinks, index) in favoriteDrinks">
-          <button v-on:click="removeFavorite(index)">Delete Favorite</button>
-        </li>
+        <li v-for="(favoriteDrinks, index) in favoriteDrinks"></li>
+        <button v-on:click="removeFavorite(index)">Delete Favorite</button>
       </div>
     </div>
   </div>
@@ -80,7 +79,7 @@ h2 {
    color: white;
  }
 
- #drink-list {
+ #list-info {
     padding-top: 40px;
     max-width: 800px;
     font-family: 'Century Gothic', sans-serif;
