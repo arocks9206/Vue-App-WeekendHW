@@ -7,6 +7,7 @@
       <drink-list :drinks="drinks"></drink-list>
       <drink-detail v-if='selectedDrink' :drink='selectedDrink'></drink-detail>
       <button v-on:click='addFavorite'>Add Favorite</button>
+    </div>
 
       <div id="favorite-drinks-list">
         <h2>Favorite Drinks</h2>
@@ -14,7 +15,6 @@
         <li v-for="(favoriteDrinks, index) in favoriteDrinks"></li>
         <button v-on:click="removeFavorite(index)">Delete Favorite</button>
       </div>
-    </div>
   </div>
 </template>
 
@@ -80,15 +80,29 @@ h2 {
  }
 
  #list-info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: left;
+    border-radius: 25px;
+    border: 2px solid #e8d5b7;
+    background-color: #f98b60;
     padding-top: 40px;
     max-width: 800px;
     font-family: 'Century Gothic', sans-serif;
     color: white;
     font-weight: 400;
     font-size: 18px;
- }
+  }
 
  #favorite-drinks-list {
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   align-items: left;
+   border-radius: 25px;
+   border: 2px solid #e8d5b7;
+   background-color: #ffc057;
    padding-top: 40px;
    max-width: 800px;
    font-family: 'Century Gothic', sans-serif;
@@ -96,4 +110,16 @@ h2 {
    font-weight: 400;
    font-size: 18px;
  }
+
+ button {
+  font: bold 11px Century Gothic;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
 </style>
