@@ -12,7 +12,7 @@
       <div id="favorite-drinks-list">
         <h2>Favorite Drinks</h2>
         <drink-list :drinks="favoriteDrinks"></drink-list>
-        <li v-for="(favoriteDrinks, index) in favoriteDrinks"></li>
+        <li v-for="(favoriteDrinks, index) in favoriteDrinks"</li>
         <button v-on:click="removeFavorite(index)">Delete Favorite</button>
       </div>
   </div>
@@ -103,6 +103,22 @@ h2 {
    border-radius: 25px;
    border: 2px solid #e8d5b7;
    background-color: #ffc057;
+   padding-top: 40px;
+   max-width: 800px;
+   font-family: 'Century Gothic', sans-serif;
+   color: white;
+   font-weight: 400;
+   font-size: 18px;
+ }
+
+ .drink-detail {
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   align-items: left;
+   border-radius: 25px;
+   border: 2px solid #e8d5b7;
+   background-color: #ea5959;
    padding-top: 40px;
    max-width: 800px;
    font-family: 'Century Gothic', sans-serif;
